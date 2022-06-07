@@ -10,5 +10,5 @@ Feature: Print items and qty
     |Store A  |Apples   |3       |
     |Store A  |Bananas  |7       |
     |Store XYZ|Cucumbers|4       |
-    When I have collected products in Collection
+    When I have collected products in Map Collection
     Then print the shoppingList

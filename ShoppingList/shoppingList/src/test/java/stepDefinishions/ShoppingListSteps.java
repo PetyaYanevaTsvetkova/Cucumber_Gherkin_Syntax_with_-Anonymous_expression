@@ -20,7 +20,7 @@ public class ShoppingListSteps {
     }
 
 
-    @When("I have collected products in Collection")
+    @When("I have collected products in Map Collection")
     public void iHaveCollectedProductsInCollection() {
         items = new HashMap<>();
         for (Map<String, String> map : this.storesWithItemAndQuantity) {
