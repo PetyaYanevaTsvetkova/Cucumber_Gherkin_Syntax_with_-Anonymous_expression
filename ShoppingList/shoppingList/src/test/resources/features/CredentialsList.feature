@@ -1,5 +1,5 @@
 Feature: List of credentials
-  Using Gherkin Data Table, implemetent a step that accepts a table with multiple columns that
+  Using Gherkin Data Table, implement a step that accepts a table with multiple columns that
   contain usernames and passwords and extracts it into a Map.
   The step should print all the input credentials in the format “User <username> has <password> for password”
 
