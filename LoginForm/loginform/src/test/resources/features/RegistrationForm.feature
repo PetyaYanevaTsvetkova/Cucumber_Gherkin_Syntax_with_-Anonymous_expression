@@ -1,3 +1,5 @@
+# Created by Petya Yaneva-Tsvetkova
+
 Feature: Registration Functionality
   As a customer I want to create registration
 

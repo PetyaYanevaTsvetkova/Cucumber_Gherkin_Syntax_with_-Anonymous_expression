@@ -1,3 +1,5 @@
+# Created by Petya Yaneva-Tsvetkova
+
 Feature: Login Functionality
   As a customer I want to login with credentials
 

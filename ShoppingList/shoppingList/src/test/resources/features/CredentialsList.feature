@@ -1,3 +1,5 @@
+# Created by Petya Yaneva-Tsvetkova
+
 Feature: List of credentials
   Using Gherkin Data Table, implement a step that accepts a table with multiple columns that
   contain usernames and passwords and extracts it into a Map.

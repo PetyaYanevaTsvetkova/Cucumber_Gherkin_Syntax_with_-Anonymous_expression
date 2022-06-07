@@ -1,3 +1,5 @@
+# Created by Petya Yaneva-Tsvetkova
+
 Feature: Print items and qty
   Print all the items and qty needed, grouped by the store name
 

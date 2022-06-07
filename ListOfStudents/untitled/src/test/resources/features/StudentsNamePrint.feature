@@ -1,3 +1,5 @@
+# Created by Petya Yaneva-Tsvetkova
+
 Feature: Print student's names
   Print a collection of the student's names
 
