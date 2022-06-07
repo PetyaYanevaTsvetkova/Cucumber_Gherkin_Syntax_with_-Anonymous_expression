@@ -3,94 +3,121 @@
 
 ## Project Description:
 		
-	heory:
+	Theory:
 
-Cucumber anonymous expression: {}
+	Cucumber anonymous expression: {}
 
-Gherkin Syntax: 
+	Gherkin Syntax: 
 
-//Feature
+	Feature
 
-Rule (as of Gherkin 6)
+	Rule (as of Gherkin 6)
 
-//Example (or Scenario)
+	Example (or Scenario)
 
-//Given, When, Then, And, But for steps (or *)
+	Given, When, Then, And, But for steps (or *)
 
-Background
+	Background
 
-Scenario Outline (or Scenario Template)
+	Scenario Outline (or Scenario Template)
 
-Examples (or Scenarios)
+	Examples (or Scenarios)
 
 
-There are a few secondary Gherkin keywords as well:
+	There are a few secondary Gherkin keywords as well:
 
-""" (Doc Strings)
+	""" (Doc Strings)
 
-| (Data Tables)
+	| (Data Tables)
 
-@ (Tags)
+	@ (Tags)
 
-Comments in feature files
+	Comments in feature files
 
  
-Practical task:  
+	Practical task:  
 
-	--Write tests about a login and signup form
+	Write tests about a login and signup form
 
-Imagine you have to write Cucumber tests for a login form and registration form for new users with mandatory and optional fields. 
-Write as many tests you can think of showcasing examples of how you would use the Gherkin syntax.
+	Imagine you have to write Cucumber tests for a login form and registration form for new users with mandatory and optional fields. 
+	Write as many tests you can think of showcasing examples of how you would use the Gherkin syntax.
 
-You can use Cucumber to generate the missing methods. 
-When using some kind of input for the steps - use the Anonymous cucumber expression - {}. 
-No actual functionality is needed in the step definitions, messages on the consoles describing 
-the actions would be enough for this story.
+	You can use Cucumber to generate the missing methods. 
+	When using some kind of input for the steps - use the Anonymous cucumber expression - {}. 
+	No actual functionality is needed in the step definitions, messages on the consoles describing 
+	the actions would be enough for this story.
 
-	--List of Student names
+	List of Student names
 
-Using Gherkin Data Table, implemetent a step that accepts a table with only one column 
-that contains a list of student names and prints them on the console.
+	Using Gherkin Data Table, implemetent a step that accepts a table with only one column 
+	that contains a list of student names and prints them on the console.
 
-	--Shopping list
+	Shopping list
 
-Using Gherkin Data Table, implemetent a step that accepts a table with multiple
-columns that contains a shopping list (for example: store, item, quantity, etc). 
-The step should print all the items and qty needed, grouped by the store name.
+	Using Gherkin Data Table, implemetent a step that accepts a table with multiple
+	columns that contains a shopping list (for example: store, item, quantity, etc). 
+	The step should print all the items and qty needed, grouped by the store name.
 
-Example output on the console:
+	Example input:
 
-	--I need to buy from Store A:
+   |Store    |Item     |Quantity|
+    |Store A  |Sugar    |2       |
+    |Store XYZ|Flour    |1       |
+    |Store XYZ|Waffles  |5       |
+    |Store A  |Apples   |3       |
+    |Store A  |Bananas  |7       |
+    |Store XYZ|Cucumbers|4       |
 
-2 Sugar
 
-3 Apples
+	Example output on the console:
 
-7 Bananas
+	I need to buy from Store A:
 
-	--I need to buy from Store XYZ:
+	2 Sugar
 
-1 Flour
+	3 Apples
 
-5 Waffles
+	7 Bananas
 
-4 Cucumbers
+	I need to buy from Store XYZ:
 
-Acceptance criteria:
+	1 Flour
 
-As a QA Automation trainee, I want to gain knowledge of:
+	5 Waffles
 
-how to use anonymous expression to capture any type of data input (int, String etc)
+	4 Cucumbers
 
-how to write tests using Gherkin syntax
 
-Examples for all Gherkin keywords are demonstrated in the tasks.
+	Credential list
 
-Test scenarios are running and are implemented as per definitions above.
+	Using Gherkin Data Table, implemetent a step that accepts a table with multiple 
+	columns that contain usernames and passwords and extracts it into a Map. 
+	The step should print all the input credentials in the format “User <username> has <password> for password”
 
-Comment on the top of the feature file(s) added with the name of the person who created the tests
+    |user_1@gmail.com|12345    |
+    |user_2@yahoo.com|SECRET123|
+    |user_3@abv.bg   |0000000  |
 
-Only specific group or sub-group (suite) of tests can be executed through a JUnit Cucumber Test Runner class
+	Example output:
+
+	User user_1@gmail.com has 12345 for password
+
+
+	Acceptance criteria:
+
+	As a QA Automation trainee, I want to gain knowledge of:
+
+	how to use anonymous expression to capture any type of data input (int, String etc)
+
+	how to write tests using Gherkin syntax
+
+	Examples for all Gherkin keywords are demonstrated in the tasks.
+
+	Test scenarios are running and are implemented as per definitions above.
+
+	Comment on the top of the feature file(s) added with the name of the person who created the tests
+
+	Only specific group or sub-group (suite) of tests can be executed through a JUnit Cucumber Test Runner class
 
 ## Table of Contents:
 	ListOfStudents
