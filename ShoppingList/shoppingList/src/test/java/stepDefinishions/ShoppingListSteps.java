@@ -13,18 +13,18 @@ public class ShoppingListSteps {
     Map<String, Map<String, Integer>> items;
 
 
-// 1st List element: Map (Store -> Store A; Item -> Sugar; Quantity -> 2)
-// 2nd List element: Map (Store -> Store XYZ; Item -> Flour; Quantity -> 1)
+// 1st List item: Map (Store -> Store A; Item -> Sugar; Quantity -> 2)
+// 2nd List item: Map (Store -> Store B; Item -> Bread; Quantity -> 5)
     @Given("^I have the following table with the shoppingList$")
     public void inputDataTable(DataTable shoppingList) {
-        this.storesWithItemAndQuantity = shoppingList.asMaps(String.class, String.class);
+        storesWithItemAndQuantity = shoppingList.asMaps(String.class, String.class);
     }
 
-//Map <Store , Map <Sugar , 2>> items = new TreeMap<>()
+//Map <Store , Map <Sugar , 2>> items = new TreeMap<>() -> which is sorted based on the natural ordering of the keys
     @When("I have collected products in Map Collection")
     public void iHaveCollectedProductsInCollection() {
         items = new TreeMap<>();
-        for (Map<String, String> map : this.storesWithItemAndQuantity) {
+        for (Map<String, String> map : storesWithItemAndQuantity) {
             String store = map.get("Store");
             String item = map.get("Item");
             Integer quantity = Integer.parseInt(map.get("Quantity"));
@@ -35,6 +35,7 @@ public class ShoppingListSteps {
         }
     }
 
+    //print all the items and qty needed, grouped by the store name in natural order
     @Then("print the shoppingList")
     public void printTheShoppingList() {
         for (Map.Entry<String, Map<String, Integer>> mapEntry : this.items.entrySet()) {
