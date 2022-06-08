@@ -6,23 +6,24 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.it.Ma;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ShoppingListSteps {
     List<Map<String, String>> storesWithItemAndQuantity;
     Map<String, Map<String, Integer>> items;
 
+
+// 1st List element: Map (Store -> Store A; Item -> Sugar; Quantity -> 2)
+// 2nd List element: Map (Store -> Store XYZ; Item -> Flour; Quantity -> 1)
     @Given("^I have the following table with the shoppingList$")
     public void inputDataTable(DataTable shoppingList) {
         this.storesWithItemAndQuantity = shoppingList.asMaps(String.class, String.class);
     }
 
-
+//Map <Store , Map <Sugar , 2>> items = new TreeMap<>()
     @When("I have collected products in Map Collection")
     public void iHaveCollectedProductsInCollection() {
-        items = new HashMap<>();
+        items = new TreeMap<>();
         for (Map<String, String> map : this.storesWithItemAndQuantity) {
             String store = map.get("Store");
             String item = map.get("Item");
