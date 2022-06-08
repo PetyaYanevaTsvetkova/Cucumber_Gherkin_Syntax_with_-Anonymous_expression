@@ -20,7 +20,7 @@ public class ShoppingListSteps {
         storesWithItemAndQuantity = shoppingList.asMaps(String.class, String.class);
     }
 
-//Map <Store , Map <Sugar , 2>> items = new TreeMap<>() -> which is sorted based on the natural ordering of the keys
+//Map <Store A, Map <Sugar , 2>> items = new TreeMap<>() -> which is sorted based on the natural ordering of the keys
     @When("I have collected products in Map Collection")
     public void iHaveCollectedProductsInCollection() {
         items = new TreeMap<>();
